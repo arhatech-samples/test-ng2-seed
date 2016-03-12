@@ -3,9 +3,15 @@
   Do you know any others? Add to the list yourself.
 </p>
 
-<form (submit)="addName()">
+<form [ngFormModel]="form"  (submit)="addName()">
+  <!-- <datepicker [(ngModel)]="dt" [minDate]="minDate" [showWeeks]="true"></datepicker> -->
   <input [(ngModel)]="newName" placeholder="Awesome Computer Scientist">
+  <input type="text" ngControl="name" placeholder="Awesome Computer Scientist">
+  <!-- <input [(ngModel)]="newName" placeholder="Awesome Computer Scientist"> -->
+  <!-- <input type="date" class="form-control" [datepicker-popup] [(ngModel)]="dt" [minDate]="minDate" [(isOpen)]="opened" placeholder="Awesome Computer Scientist"> -->
   <button type="submit">Add</button>
+  <!-- <button type="button" class="btn btn-default"
+                         (click)="open()"></button> -->
 </form>
 
 

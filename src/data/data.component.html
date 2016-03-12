@@ -1,0 +1,18 @@
+<form [ngFormModel]="userForm" (submit)="saveUser()">
+    {{userForm.valid}}
+    <label for="name">Name</label>
+    <input ngControl="name" id="name" />
+    <control-messages controln="name"></control-messages>
+
+    <!-- <div ngControlGroup="match_email">      -->
+        <!-- <div *ngIf="emailGroup.touched && !emailGroup.valid">Passwords must match.</div> -->
+        <label for="email">Email</label>
+        <input ngControl="email" id="email" />
+        <control-messages controln="email"></control-messages>
+        
+        <label for="emailVer">EmailVer</label>
+        <input ngControl="emailVer" id="emailVer" />
+        <control-messages controln="emailVer"></control-messages>
+    <!-- </div> -->
+    <button type="submit" [disabled]="!userForm.valid">Submit</button>
+</form>

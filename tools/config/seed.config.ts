@@ -90,10 +90,11 @@ export class SeedConfig {
       [this.BOOTSTRAP_MODULE]: `${this.APP_BASE}${this.BOOTSTRAP_MODULE}`,
       'angular2/*': `${this.APP_BASE}angular2/*`,
       'rxjs/*': `${this.APP_BASE}rxjs/*`,
-      '*': `${this.APP_BASE}node_modules/*`
+      '*': `${this.APP_BASE}node_modules/*`,
+      'moment': `${this.APP_BASE}node_modules/moment/moment`
     },
     packages: {
-      angular2: { defaultExtension: false },
+    angular2: { defaultExtension: false },
       rxjs: { defaultExtension: false }
     }
   };
@@ -104,7 +105,8 @@ export class SeedConfig {
     defaultJSExtensions: true,
     paths: {
       [`${this.TMP_DIR}/*`]: `${this.TMP_DIR}/*`,
-      '*': 'node_modules/*'
+      '*': 'node_modules/*',
+      'moment': `node_modules/moment/moment.js`
     }
   };
 }
